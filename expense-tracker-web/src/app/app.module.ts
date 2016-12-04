@@ -16,6 +16,7 @@ import { AuthGuard } from './auth-guard.service';
 
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { Ng2DatetimePickerModule } from 'ng2-datetime-picker';
+import { CurrencyMaskModule } from "ng2-currency-mask";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { Ng2DatetimePickerModule } from 'ng2-datetime-picker';
     HttpModule,
     SDKBrowserModule.forRoot(),
     ChartsModule,
-    Ng2DatetimePickerModule
+    Ng2DatetimePickerModule,
+    CurrencyMaskModule
   ],
   providers: [AuthGuard, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
