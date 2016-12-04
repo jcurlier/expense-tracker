@@ -48,6 +48,7 @@ export class ExpensesComponent implements OnInit {
 
   add() {
     this.expense = new Expense();
+    this.expense.amount = 0;
     this.formVisible = true;
   }
 
