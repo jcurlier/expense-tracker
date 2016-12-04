@@ -6,7 +6,7 @@
     "lint": "eslint .",
     "start": "node .",
     "posttest": "npm run lint && nsp check",
-    "build:sdk": "./node_modules/.bin/lb-sdk server/server ../expenses-tracker-web/src/app/shared/sdk -l angular2 -d ng2web -i enabled"
+    "build:sdk": "./node_modules/.bin/lb-sdk server/server ../expense-tracker-web/src/app/shared/sdk -l angular2 -d ng2web -i enabled"
   },
   "dependencies": {
     "compression": "^1.0.3",
