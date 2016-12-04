@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthGuard } from './auth-guard.service';
 
 import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { Ng2DatetimePickerModule } from 'ng2-datetime-picker';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     AppRoutingModule,
     HttpModule,
     SDKBrowserModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    Ng2DatetimePickerModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

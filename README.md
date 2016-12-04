@@ -19,3 +19,4 @@ Credit where credit is due:
 * [LoopBack.io](https://loopback.io/)
 * [LoopBack SDK Builder](https://www.npmjs.com/package/@mean-expert/loopback-sdk-builder)
 * [Pure](http://purecss.io/)
+* [AngularJS 2 DateTime Picker](https://github.com/ng2-ui/ng2-datetime-picker)

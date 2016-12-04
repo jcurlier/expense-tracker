@@ -7,3 +7,6 @@
 .expenses h2 {
   margin-bottom: 15px;
 }
+div.pure-controls button {
+  margin-top: 10px;
+}
