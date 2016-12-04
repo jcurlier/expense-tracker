@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
-    "posttest": "npm run lint && nsp check"
+    "posttest": "npm run lint && nsp check",
+    "build:sdk": "./node_modules/.bin/lb-sdk server/server ../expenses-tracker-web/src/app/shared/sdk -l angular2 -d ng2web -i enabled"
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -20,6 +21,7 @@
     "strong-error-handler": "^1.0.1"
   },
   "devDependencies": {
+    "@mean-expert/loopback-sdk-builder": "^2.1.0-rc.2",
     "eslint": "^2.13.1",
     "eslint-config-loopback": "^4.0.0",
     "nsp": "^2.1.0"
