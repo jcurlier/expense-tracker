@@ -26,6 +26,7 @@ For testing, you can use the following users:
 See
 * [Sample data creation code](server/boot/create-sample-model.js)
 * [How to login to make API call](expense-tracker-api/README.md)
+
 ---
 
 Credit where credit is due:
