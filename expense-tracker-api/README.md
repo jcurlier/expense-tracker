@@ -10,7 +10,7 @@ Install Loopack
 
 See [Loopack Getting Started](http://loopback.io/getting-started/)
 
-Note: you should update the SLC tool ```slc update``` to make sure you have the latest.
+Note: you should update the SLC tool `slc update` to make sure you have the latest.
 
 Create a mySQL database
 
@@ -40,6 +40,10 @@ Run `slc loopback:relations` to generate a new relationship between model.
 See [SLC Looback](https://loopback.io/doc/en/lb2/Command-line-tools.html) for more commands.
 
 Under the hood, the command-line tools use Yeoman. If you are already using Yeoman and are comfortable with it, you can use it directly.
+
+## Build
+
+Run `npm run build:sdk` to build the SDK and copy it to the shared folder of the Angular application. 
 
 ## Production server
 
