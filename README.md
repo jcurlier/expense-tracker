@@ -11,6 +11,20 @@ See the following projects:
 
 This project was started as a learning experience for me to get familiar with Angular.js, and I welcome anyone else in the web development community to play with it :)
 
+Expenses Tracker is currenlty hosted on AWS at the following URL [http://54.174.89.133](http://54.174.89.133). The API Explorer is available at the following URL [http://54.174.89.133/explorer/](http://54.174.89.133/explorer/).
+
+For testing, you can use the following users:
+
+| email | password |
+| --- | --- |
+| admin1@example.com | admin1 |
+| admin2@example.com | admin2 |
+| test1@example.com | test1 |
+| ... | ... |
+| test8@example.com | test8 |
+
+ (see [create-sample-model.js](server/boot/create-sample-model.js)
+ 
 ---
 
 Credit where credit is due:
