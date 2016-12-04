@@ -15,8 +15,10 @@ This project was started as a learning experience for me to get familiar with An
 
 Credit where credit is due:
 * [Angular.js](http://angularjs.org/)
-* [Angular Chart](https://jtblin.github.io/angular-chart.js/)
+* [Angular Chart](https://github.com/valor-software/ng2-charts)
+* [Chart JS](https://github.com/chartjs/Chart.js)
 * [LoopBack.io](https://loopback.io/)
 * [LoopBack SDK Builder](https://www.npmjs.com/package/@mean-expert/loopback-sdk-builder)
 * [Pure](http://purecss.io/)
 * [AngularJS 2 DateTime Picker](https://github.com/ng2-ui/ng2-datetime-picker)
+* [AngularJS 2 Currency Mask](https://www.npmjs.com/package/ng2-currency-mask)
