@@ -62,8 +62,7 @@ export class ExpensesComponent implements OnInit {
         this.expenseApi.updateAttributes(this.expense.id, this.expense).subscribe((data) => {});
     // this is an add
     } else {
-      this.expenseApi.create(this.expense).subscribe((data) => { alert(data); });
-      this.expenses.push(this.expense);
+      this.expenseApi.create(this.expense).subscribe((data) => { this.expenses.unshift(this.expense); });
     }
     this.formVisible = false;
     this.current = -1;
