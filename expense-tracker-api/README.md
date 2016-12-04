@@ -27,11 +27,19 @@ Set the environemnt variables defining your mySQL server information:
 | DATABASE_USER | Username credential for the database |
 | DATABASE_PASS | Password credential for the database user above |
 
-Run `npm start` or `node .` for a dev server. Navigate to `http://0.0.0.0:3000/explorer` to browser the REST API. 
+Run `npm start` or `node .` for a dev server.
 
-The command will generate the mySQL tables as well as some sample data.
+The command will generate the mySQL tables as well as some sample data (see [create-sample-model.js](server/boot/create-sample-model.js) for code to create the sample data) anf then it will start the nodejs server. 
 
-See [create-sample-model.js](server/boot/create-sample-model.js) for code run to create the sample data.
+Navigate to `http://0.0.0.0:3000/explorer` to browser the REST API. 
+
+As all the API are protected by ACL, you should login and set the token. The format for the login credentials is as below:
+```json
+{
+   "email": "test@example.com",
+   "password": "test"
+}
+```
 
 ## Code scaffolding
 
