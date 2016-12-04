@@ -1,5 +1,20 @@
 <div class="report">
   <h2>Chart</h2>
+  <form class="pure-form" role="form" (submit)="filter()">
+    <div class="pure-control-group">
+      <label for="name">Starting date</label>
+      <input class="pure-input-1-2" type="text" placeholder="DD-MM-YYYY" [(ngModel)]="startDate" name="startDate" 
+          ng2-datetime-picker date-only="true" date-format="DD-MM-YYYY" required>
+    </div>
+    <div class="pure-control-group">
+      <label for="name">End date</label>
+      <input class="pure-input-1-2" type="text" placeholder="DD-MM-YYYY" [(ngModel)]="endDate" name="endDate" 
+          ng2-datetime-picker date-only="true" date-format="DD-MM-YYYY" required>
+    </div>
+    <div class="pure-controls">
+      <button type="submit" class="pure-button pure-button-primary">Filter</button>
+    </div>
+  </form>
   <canvas baseChart 
     class="chart"
     [datasets]="datasets"

@@ -8,3 +8,10 @@
 .report h2 {
   margin-bottom: 15px;
 }
+.report form {
+  margin-bottom: 15px;
+}
+.report button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
