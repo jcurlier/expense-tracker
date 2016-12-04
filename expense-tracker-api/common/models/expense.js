@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(Expense) {
 
   Expense.beforeRemote('create', function(context, user, next) {
