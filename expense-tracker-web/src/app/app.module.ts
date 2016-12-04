@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { SDKBrowserModule } from './shared/sdk/index';
 
@@ -33,7 +34,7 @@ import { Ng2DatetimePickerModule } from 'ng2-datetime-picker';
     ChartsModule,
     Ng2DatetimePickerModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
