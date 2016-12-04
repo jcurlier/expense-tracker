@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, SimpleChange } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { LoopBackConfig } from './../shared/sdk/index';
 import { BASE_URL, API_VERSION } from './../shared/base.url';
 import { UserApi } from '../shared/sdk/services';
@@ -95,6 +95,8 @@ export class ReportComponent implements OnInit {
 
         this.labels = labels;
         this.datasets[0].data = results;
+
+        this.chart.getChartBuilder
       }
   }
 }
