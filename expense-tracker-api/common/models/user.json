@@ -5,7 +5,23 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {},
+  "mysql": {
+    "tableName": "users"
+  },
+  "hidden": [
+    "password"
+  ],
+  "properties": {
+    "username": false,
+    "realm": false,
+    "credentials": false,
+    "challenges": false,
+    "emailVerified": false,
+    "verificationToken": false,
+    "status": false,
+    "created": false,
+    "lastUpdated": false
+  },
   "validations": [],
   "relations": {},
   "acls": [],
