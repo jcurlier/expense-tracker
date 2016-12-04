@@ -1,3 +1,21 @@
-<p>
-  admin works!
-</p>
+<div class="admin">
+  <h2>Expenses for all Users</h2>
+  <table *ngIf="expenses.length > 0" class="pure-table pure-table-bordered">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Amount</th>
+        <th>Owner</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let expense of expenses">
+        <td>{{ expense.date | date }}</td>
+        <td>{{ expense.description }}</td>
+        <td>{{ expense.amount | currency:'USD':true:'1.2-2' }}</td>
+        <td><a href="mailto:{{ expense.owner.email }}">{{ expense.owner.email }}</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
