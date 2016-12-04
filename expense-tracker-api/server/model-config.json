@@ -31,5 +31,13 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "expense": {
+    "dataSource": "mysqlDs",
+    "public": true
+  },
+  "user": {
+    "dataSource": "mysqlDs",
+    "public": true
   }
 }
