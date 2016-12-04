@@ -7,6 +7,8 @@ import { ExpensesComponent } from './expenses/expenses.component';
 import { AdminComponent } from './admin/admin.component';
 import { ReportComponent } from './report/report.component';
 
+import { AuthGuard } from './auth-guard.service';
+
 const appRoutes: Routes = [
   // Add the redirect
   {
@@ -21,15 +23,18 @@ const appRoutes: Routes = [
   },
   {
     path: 'expenses',
-    component: ExpensesComponent
+    component: ExpensesComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin',
-    component: AdminComponent
+    component: AdminComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'report',
-    component: ReportComponent
+    component: ReportComponent,
+    canActivate: [AuthGuard]
   }
 ];
 

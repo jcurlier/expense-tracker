@@ -1,0 +1,39 @@
+header {
+  background: #000;
+  width: 100%;
+  padding: 10px 15px;
+  display: table;
+  color: #FFF; 
+  vertical-align: middle; 
+}
+header h1 {
+  font-size: 15px;
+  margin: 0;
+  text-transform: uppercase;
+  vertical-align: middle; 
+}
+ul.tabs {
+  margin-bottom: 30px;
+  box-shadow: 1px 2px 15px #888888; 
+}
+ul.tabs .tab {
+  text-align: center;
+  text-transform: uppercase; 
+}
+ul.tabs .tab a, ul.tabs .tab span {
+  border-bottom: 1px solid #DDD;
+  display: block;
+  padding: 0.6em;
+  font-size: 1.2em;
+  transition: color 0.3s;
+  background-color: #FFF;
+  color: #666; 
+  border-right: 1px solid #DDD; 
+}
+ul.tabs .tab a:hover {
+  color: #000; 
+  cursor: pointer;
+}
+ul.tabs .tab a.active {
+  color: dodgerblue; 
+}

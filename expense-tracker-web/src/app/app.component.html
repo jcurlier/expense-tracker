@@ -1,3 +1,23 @@
-<h1>
-  {{title}}
-</h1>
+<header class="clearfix table row">
+  <div class="cell">
+	  <h1>Expense Tracker</h1>
+  </div>
+</header>
+<nav class="row" *ngIf="isAuthenticated()">
+  <ul class="menu tabs pure-g">
+    <li class="tab pure-u-1-4">
+      <a routerLink="/expenses" routerLinkActive="active"><i class="fa fa-list-alt" aria-hidden="true"></i> Expenses</a>
+    </li>
+    <li class="tab pure-u-1-4">
+      <a routerLink="/report" routerLinkActive="active"><i class="fa fa-bar-chart" aria-hidden="true"></i> Report</a>
+    </li>
+    <li class="tab pure-u-1-4">
+      <a routerLink="/admin" routerLinkActive="active" *ngIf="isAdmin()"><i class="fa fa-user-secret" aria-hidden="true"></i> Admin</a>
+      <span *ngIf="isAdmin() !== true">&nbsp;</span>
+    </li>
+    <li class="tab pure-u-1-4">
+      <a (click)="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
