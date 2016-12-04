@@ -1,11 +1,47 @@
 {
   "name": "expense",
-  "base": "Model",
-  "idInjection": true,
+  "base": "PersistedModel",
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
-  "properties": {},
+  "mysql": {
+    "tableName": "expenses"
+  },
+  "hidden": [
+    "ownerId"
+  ],
+  "properties": {
+    "date": {
+      "type": "date",
+      "required": true,
+      "mysql": {
+        "columnName": "datetime",
+        "nullable": "N"
+      }
+    },
+    "amount": {
+      "type": "number",
+      "required": true,
+      "dataType": "decimal", 
+      "precision": 12, 
+      "scale": 2, 
+      "mysql": {
+        "columnName": "amount",
+        "nullable": "N"
+      }
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "mysql": {
+        "columnName": "description",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    }
+  },
   "validations": [],
   "relations": {},
   "acls": [],
