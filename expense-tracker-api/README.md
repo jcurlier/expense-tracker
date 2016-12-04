@@ -1,31 +1,49 @@
-# ExpenseTrackerWeb
+# Expense Tracker Backend API
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.21.
+This project was generated with [SLC Looback](https://loopback.io/doc/en/lb2/Command-line-tools.html) version 6.0.3.
 
 ## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+Install Loopack
+
+```npm install -g strongloop```
+See [Loopack Getting Started](http://loopback.io/getting-started/)
+
+Create a mySQL database
+
+```SQL
+CREATE SCHEMA `expenseTracker` DEFAULT CHARACTER SET utf8mb4;
+```
+Set the environemnt variables defining your mySQL server information:
+
+| Environment Variable | Description |
+| ---| --- |
+| DATABASE_HOST | Hostname for the mySQL database server |
+| DATABASE_PORT | Port for the mySQL database server, usually 3306 |
+| DATABASE_NAME | Name for the mySQL databse |
+| DATABASE_USER | Username credential for the database |
+| DATABASE_PASS | Password credential for the database user above |
+
+Run `npm start` or `node .` for a dev server. Navigate to `http://0.0.0.0:3000/explorer` to browser the REST API. 
+
+The command will generate the mySQL tables.
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
+Run `slc loopback:datasource` to generate a new datasource.
+Run `slc loopback:model` to generate a new model.
+Run `slc loopback:relations` to generate a new relationship between model.
 
-## Build
+See [SLC Looback](https://loopback.io/doc/en/lb2/Command-line-tools.html) for more commands.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Under the hood, the command-line tools use Yeoman. If you are already using Yeoman and are comfortable with it, you can use it directly.
 
-## Running unit tests
+## Production server
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Set the environemnt variables for your setup:
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to Github Pages
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+| Environment Variable | Description |
+| ---| --- |
+| API_HOST | Host for your API |
+| API_PORT | Port for your API |
+| NODE_ENV | production |
