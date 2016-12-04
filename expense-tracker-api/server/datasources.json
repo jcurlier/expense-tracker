@@ -2,5 +2,14 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "mysqlDs": {
+    "host": "${DATABASE_HOST}",
+    "port": "${DATABASE_PORT}",
+    "database": "${DATABASE_NAME}",
+    "username": "${DATABASE_USER}",
+    "password": "${DATABASE_PASS}",
+    "name": "mysqlDs",
+    "connector": "mysql"
   }
 }
