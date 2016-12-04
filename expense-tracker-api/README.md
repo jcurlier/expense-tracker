@@ -7,7 +7,10 @@ This project was generated with [SLC Looback](https://loopback.io/doc/en/lb2/Com
 Install Loopack
 
 ```npm install -g strongloop```
+
 See [Loopack Getting Started](http://loopback.io/getting-started/)
+
+Note: you should update the SLC tool ```slc update``` to make sure you have the latest.
 
 Create a mySQL database
 
