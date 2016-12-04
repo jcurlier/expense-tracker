@@ -95,8 +95,6 @@ export class ReportComponent implements OnInit {
 
         this.labels = labels;
         this.datasets[0].data = results;
-
-        this.chart.getChartBuilder
       }
   }
 }
