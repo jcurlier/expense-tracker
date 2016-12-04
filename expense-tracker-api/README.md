@@ -29,7 +29,9 @@ Set the environemnt variables defining your mySQL server information:
 
 Run `npm start` or `node .` for a dev server. Navigate to `http://0.0.0.0:3000/explorer` to browser the REST API. 
 
-The command will generate the mySQL tables.
+The command will generate the mySQL tables as well as some sample data.
+
+See [create-sample-model.js](server/boot/create-sample-model.js) for code run to create the sample data.
 
 ## Code scaffolding
 
