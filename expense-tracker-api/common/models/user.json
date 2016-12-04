@@ -23,7 +23,13 @@
     "lastUpdated": false
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "expenses": {
+      "type": "hasMany",
+      "model": "expense",
+      "foreignKey": "ownerId"
+    }
+  },
   "acls": [],
   "methods": {}
 }
