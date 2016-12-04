@@ -24,8 +24,8 @@
     "nsp": "^2.1.0"
   },
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "https://github.com/jcurlier/expense-tracker.git"
   },
   "license": "UNLICENSED",
   "description": "expense-tracker-api"
