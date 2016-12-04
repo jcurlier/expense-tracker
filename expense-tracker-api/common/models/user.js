@@ -31,6 +31,30 @@ module.exports = function(User) {
     returns: {type: 'array', root: true},
     isStatic: true
   });
+
+  // The WEEKOFYEAR function assumes that the first day of the week is Monday and the first week has more than 3 days.
+  User.weeklyReport = function (id, cb) {
+    var ds = User.dataSource;
+    var sql = `SELECT YEARWEEK(datetime, 3) as yearWeek, sum(amount) as total,
+        DATE_ADD(datetime, INTERVAL(1-DAYOFWEEK(datetime)) DAY) as weekStartDate,   
+        DATE_ADD(datetime, INTERVAL(7-DAYOFWEEK(datetime)) DAY) as weekEndDate
+        FROM expenses
+        WHERE ownerId=?
+        GROUP BY YEARWEEK(datetime, 3)
+        ORDER BY YEARWEEK(datetime, 3) ASC`
+
+    ds.connector.query(sql, [ id ], function (err, weeks) {
+      if (err) console.error(err);
+      cb(err, weeks);
+    });
+  };
+  User.remoteMethod('weeklyReport', {
+    description: 'Weekly expenses report for a user.',
+    http: { path: '/:id/weeklyReport', verb: 'get' },
+    accepts: {arg: 'id', type: 'string', required: 'true', description: 'User Id'},
+    returns: {type: 'array', root: true},
+    isStatic: true
+  });
   
   User.disableRemoteMethod("create", true);
   User.disableRemoteMethod("upsert", true);
