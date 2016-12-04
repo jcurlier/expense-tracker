@@ -1,3 +1,44 @@
-<p>
-  expenses works!
-</p>
+<div class="expenses">
+  <h2>My expenses
+    <a (click)="add()"><span class="pull-right"><i class="fa fa-plus btn-icon" aria-hidden="true"></i></span></a>
+  </h2>
+  <table *ngIf="!formVisible" class="pure-table pure-table-bordered">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Amount</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let expense of expenses; let i = index">
+        <td>{{ expense.date | date }}</td>
+        <td>{{ expense.description }}</td>
+        <td>{{ expense.amount | currency:'USD':true:'1.2-2' }}</td>
+        <td>
+          <a (click)="update(i)"><i class="fa fa-pencil-square-o btn-icon" aria-hidden="true"></i></a>
+          <a (click)="delete(i)"><i class="fa fa-trash btn-icon" aria-hidden="true"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <form *ngIf="formVisible" class="pure-form pure-form-aligned" role="form" (submit)="save()">
+    <div class="pure-control-group">
+      <label for="name">Date</label>
+      <input type="text" placeholder="Date" [(ngModel)]="expense.date" name="date" required>
+    </div>
+    <div class="pure-control-group">
+      <label for="name">Description</label>
+      <input type="text" placeholder="Description" [(ngModel)]="expense.description" name="description" required>
+    </div>
+    <div class="pure-control-group">
+      <label for="amout">Amount</label>
+      <input type="text" placeholder="Amount" [(ngModel)]="expense.amount" name="amount" required>
+    </div>
+    <div class="pure-controls">
+      <button type="submit" class="pure-button pure-button-primary">Submit</button>
+      <button type="button" class="pure-button pure-button-secondary" (click)="cancel()">Cancel</button>
+    </div>
+  </form>
+</div>
