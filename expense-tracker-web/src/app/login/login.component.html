@@ -1,3 +1,15 @@
-<p>
-  login works!
-</p>
+<div class="login">
+  <form class="pure-form pure-form-aligned" role="form" (submit)="login(username.value, password.value)">
+    <div class="pure-control-group">
+      <label for="name">Username</label>
+      <input type="text" placeholder="Username" #username required>
+    </div>
+    <div class="pure-control-group">
+      <label for="password">Password</label>
+      <input type="password" placeholder="Password" #password required>
+    </div>
+    <div class="pure-controls">
+      <button type="submit" class="pure-button pure-button-primary">Submit</button>
+    </div>
+  </form>
+</div>
