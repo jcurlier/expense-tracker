@@ -1,0 +1,10 @@
+.report {
+  border: 1px solid #EFEFEF;
+  margin: 30px;
+  padding: 15px;
+  box-shadow: 1px 3px 5px #888888; 
+  display:block;
+}
+.report h2 {
+  margin-bottom: 15px;
+}
