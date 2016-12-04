@@ -23,8 +23,9 @@ For testing, you can use the following users:
 | ... | ... |
 | test8@example.com | test8 |
 
- (see [create-sample-model.js](server/boot/create-sample-model.js)
- 
+See
+* [Sample data creation code](server/boot/create-sample-model.js)
+* [How to login to make API call](expense-tracker-api/README.md)
 ---
 
 Credit where credit is due:
