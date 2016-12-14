@@ -11,7 +11,7 @@ See the following projects:
 
 This project was started as a learning experience for me to get familiar with Angular.js, and I welcome anyone else in the web development community to play with it :)
 
-Expenses Tracker is currenlty hosted on AWS at the following URL [http://54.174.89.133](http://54.174.89.133). The API Explorer is available at the following URL [http://54.174.89.133/explorer/](http://54.174.89.133/explorer/).
+Expenses Tracker is currenlty hosted on AWS at the following URL [http://54.196.140.55](http://54.196.140.55). The API Explorer is available at the following URL [http://54.196.140.55/explorer/](http://54.196.140.55/explorer/).
 
 For testing, you can use the following users:
 
